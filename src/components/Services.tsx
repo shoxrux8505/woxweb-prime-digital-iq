@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { 
   Network, 
   Cog, 
@@ -11,54 +12,55 @@ import {
   GraduationCap 
 } from "lucide-react";
 
-const services = [
-  {
-    icon: Network,
-    title: "Digital Ecosystem Development",
-    description: "Full platforms connecting multiple systems into unified intelligent environments.",
-    gradient: "from-primary to-secondary",
-  },
-  {
-    icon: Cog,
-    title: "Business Process Automation",
-    description: "Workflow optimization and data automation to streamline operations.",
-    gradient: "from-secondary to-accent",
-  },
-  {
-    icon: Bot,
-    title: "AI Integration & Chatbots",
-    description: "Custom LLM solutions, voice AI, and intelligent automation tools.",
-    gradient: "from-accent to-primary",
-  },
-  {
-    icon: Code,
-    title: "Web & App Development",
-    description: "Modern UI/UX with cutting-edge frontend and backend systems.",
-    gradient: "from-primary to-accent",
-  },
-  {
-    icon: BarChart3,
-    title: "Data & Analytics Systems",
-    description: "Advanced dashboards, visualization, and predictive analytics.",
-    gradient: "from-secondary to-primary",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX & Creative Design",
-    description: "Branding, motion design, and comprehensive digital identity creation.",
-    gradient: "from-accent to-secondary",
-  },
-  {
-    icon: GraduationCap,
-    title: "WoxWeb Prime Academy",
-    description: "Educational platform teaching Web Dev, Python, UI/UX, and AI to youth.",
-    gradient: "from-primary to-secondary",
-  },
-];
-
 const Services = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const services = [
+    {
+      icon: Network,
+      titleKey: "services.service1.title",
+      descriptionKey: "services.service1.description",
+      gradient: "from-primary to-secondary",
+    },
+    {
+      icon: Cog,
+      titleKey: "services.service2.title",
+      descriptionKey: "services.service2.description",
+      gradient: "from-secondary to-accent",
+    },
+    {
+      icon: Bot,
+      titleKey: "services.service3.title",
+      descriptionKey: "services.service3.description",
+      gradient: "from-accent to-primary",
+    },
+    {
+      icon: Code,
+      titleKey: "services.service4.title",
+      descriptionKey: "services.service4.description",
+      gradient: "from-primary to-accent",
+    },
+    {
+      icon: BarChart3,
+      titleKey: "services.service5.title",
+      descriptionKey: "services.service5.description",
+      gradient: "from-secondary to-primary",
+    },
+    {
+      icon: Palette,
+      titleKey: "services.service6.title",
+      descriptionKey: "services.service6.description",
+      gradient: "from-accent to-secondary",
+    },
+    {
+      icon: GraduationCap,
+      titleKey: "services.service7.title",
+      descriptionKey: "services.service7.description",
+      gradient: "from-primary to-secondary",
+    },
+  ];
 
   return (
     <section id="services" className="py-24 md:py-32 relative overflow-hidden">
@@ -72,17 +74,17 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Our <span className="gradient-text">Services</span>
+            {t("services.title")} <span className="gradient-text">{t("services.titleHighlight")}</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions for the digital age
+            {t("services.subtitle")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service.titleKey}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -95,11 +97,11 @@ const Services = () => {
               </div>
               
               <h3 className="text-xl font-bold mb-3 group-hover:gradient-text transition-all duration-300">
-                {service.title}
+                {t(service.titleKey)}
               </h3>
               
               <p className="text-muted-foreground leading-relaxed">
-                {service.description}
+                {t(service.descriptionKey)}
               </p>
             </motion.div>
           ))}

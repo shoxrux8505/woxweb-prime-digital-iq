@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Next Generation Digital Intelligence",
+    "title": "WoxWeb Prime",
+    "subtitle": "We create intelligent ecosystems, automation systems, and AI-integrated solutions for governments, businesses, and education.",
+    "cta1": "Let's Build Together",
+    "cta2": "Explore Our Works"
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "WoxWeb Prime",
+    "description": "WoxWeb Prime is a next-generation digital agency combining technology, design, and artificial intelligence. We build full digital ecosystems and smart automation platforms to help institutions transform their processes into intelligent systems.",
+    "stat1": "Major Government Projects",
+    "stat2": "AI-powered Platforms",
+    "stat3": "Students in WoxWeb Prime Academy"
+  },
+  "services": {
+    "title": "Our",
+    "titleHighlight": "Services",
+    "subtitle": "Comprehensive solutions for the digital age",
+    "service1": {
+      "title": "Digital Ecosystem Development",
+      "description": "Full platforms connecting multiple systems into unified intelligent environments."
+    },
+    "service2": {
+      "title": "Business Process Automation",
+      "description": "Workflow optimization and data automation to streamline operations."
+    },
+    "service3": {
+      "title": "AI Integration & Chatbots",
+      "description": "Custom LLM solutions, voice AI, and intelligent automation tools."
+    },
+    "service4": {
+      "title": "Web & App Development",
+      "description": "Modern UI/UX with cutting-edge frontend and backend systems."
+    },
+    "service5": {
+      "title": "Data & Analytics Systems",
+      "description": "Advanced dashboards, visualization, and predictive analytics."
+    },
+    "service6": {
+      "title": "UI/UX & Creative Design",
+      "description": "Branding, motion design, and comprehensive digital identity creation."
+    },
+    "service7": {
+      "title": "WoxWeb Prime Academy",
+      "description": "Educational platform teaching Web Dev, Python, UI/UX, and AI to youth."
+    }
+  },
+  "projects": {
+    "title": "Case",
+    "titleHighlight": "Studies",
+    "subtitle": "Real-world solutions transforming industries",
+    "project1": {
+      "title": "Parlament AI",
+      "description": "Digital democracy platform enabling transparent governance and citizen engagement through AI-powered insights."
+    },
+    "project2": {
+      "title": "O'zLiDeP Platform",
+      "description": "Comprehensive communication and engagement system for political parties to connect with constituents."
+    },
+    "project3": {
+      "title": "HealthTech Ecosystem",
+      "description": "Smart medical automation platform integrating AI for patient care and healthcare management."
+    },
+    "viewAll": "View All Projects"
+  },
+  "testimonials": {
+    "title": "Client",
+    "titleHighlight": "Testimonials",
+    "subtitle": "What our partners say about us",
+    "testimonial1": {
+      "quote": "WoxWeb Prime transformed our entire digital infrastructure. Their AI integration capabilities are unmatched.",
+      "author": "Dr. Sarah Johnson",
+      "role": "Director of Digital Transformation",
+      "organization": "Government Innovation Hub"
+    },
+    "testimonial2": {
+      "quote": "The automation systems they built saved us countless hours and dramatically improved our efficiency.",
+      "author": "Michael Chen",
+      "role": "CTO",
+      "organization": "TechCorp Solutions"
+    },
+    "testimonial3": {
+      "quote": "Their academy program is exceptional. My students are now building real AI applications.",
+      "author": "Prof. Ahmed Hassan",
+      "role": "Computer Science Department Head",
+      "organization": "National University"
+    }
+  },
+  "contact": {
+    "title": "Let's Build the",
+    "titleHighlight": "Future Together",
+    "subtitle": "Ready to transform your digital presence? Get in touch with us.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project...",
+    "submit": "Send Message",
+    "success": "Message Sent!",
+    "successDescription": "We'll get back to you as soon as possible."
+  },
+  "footer": {
+    "copyright": "© 2025",
+    "company": "WoxWeb Prime",
+    "rights": "— All Rights Reserved."
+  }
+}

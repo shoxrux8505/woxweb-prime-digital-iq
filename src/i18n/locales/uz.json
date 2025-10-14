@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "Biz haqimizda",
+    "services": "Xizmatlar",
+    "projects": "Loyihalar",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "badge": "Yangi avlod raqamli intellekt",
+    "title": "WoxWeb Prime",
+    "subtitle": "Biz hukumatlar, biznes va ta'lim uchun intellektual ekotizimlar, avtomatlashtirish tizimlari va AI integratsiyali yechimlar yaratamiz.",
+    "cta1": "Keling, birga quramiz",
+    "cta2": "Ishlarimizni ko'ring"
+  },
+  "about": {
+    "title": "Kompaniya haqida",
+    "titleHighlight": "WoxWeb Prime",
+    "description": "WoxWeb Prime - texnologiya, dizayn va sun'iy intellektni birlashtiradigan yangi avlod raqamli agentligi. Biz muassasalarga o'z jarayonlarini intellektual tizimlarga aylantirishda yordam beradigan to'liq raqamli ekotizimlar va aqlli avtomatlashtirish platformalarini yaratamiz.",
+    "stat1": "Yirik davlat loyihalari",
+    "stat2": "AI-platformalar",
+    "stat3": "WoxWeb Prime Academy talabalari"
+  },
+  "services": {
+    "title": "Bizning",
+    "titleHighlight": "Xizmatlarimiz",
+    "subtitle": "Raqamli davr uchun kompleks yechimlar",
+    "service1": {
+      "title": "Raqamli ekotizim yaratish",
+      "description": "Bir nechta tizimlarni yagona intellektual muhitga birlashtiruvchi to'liq platformalar."
+    },
+    "service2": {
+      "title": "Biznes jarayonlarini avtomatlashtirish",
+      "description": "Ish jarayonlarini optimallashtirish va operatsiyalarni soddalashtirish uchun ma'lumotlar avtomatlashtiruvi."
+    },
+    "service3": {
+      "title": "AI integratsiyasi va chatbotlar",
+      "description": "Maxsus LLM yechimlari, ovozli AI va intellektual avtomatlashtirish vositalari."
+    },
+    "service4": {
+      "title": "Web va ilova ishlab chiqish",
+      "description": "Zamonaviy UI/UX ilg'or frontend va backend tizimlari bilan."
+    },
+    "service5": {
+      "title": "Ma'lumotlar va tahlil tizimlari",
+      "description": "Ilg'or dashboard'lar, vizualizatsiya va bashoratli tahlil."
+    },
+    "service6": {
+      "title": "UI/UX va ijodiy dizayn",
+      "description": "Brending, motion dizayn va to'liq raqamli identifikatsiya yaratish."
+    },
+    "service7": {
+      "title": "WoxWeb Prime Akademiyasi",
+      "description": "Yoshlarga Web Dev, Python, UI/UX va AI o'rgatuvchi ta'lim platformasi."
+    }
+  },
+  "projects": {
+    "title": "Bizning",
+    "titleHighlight": "Loyihalarimiz",
+    "subtitle": "Sanoatni o'zgartiruvchi real yechimlar",
+    "project1": {
+      "title": "Parlament AI",
+      "description": "AI-insaytlar orqali shaffof boshqaruv va fuqarolarni jalb qilishni ta'minlaydigan raqamli demokratiya platformasi."
+    },
+    "project2": {
+      "title": "O'zLiDeP Platformasi",
+      "description": "Siyosiy partiyalar uchun saylovchilar bilan aloqa qilish uchun keng qamrovli kommunikatsiya va jalb qilish tizimi."
+    },
+    "project3": {
+      "title": "HealthTech Ekotizim",
+      "description": "Bemorlarni parvarish qilish va sog'liqni saqlash boshqaruvi uchun AI bilan integratsiyalangan aqlli tibbiy avtomatlashtirish platformasi."
+    },
+    "viewAll": "Barcha loyihalar"
+  },
+  "testimonials": {
+    "title": "Mijozlar",
+    "titleHighlight": "Fikrlari",
+    "subtitle": "Hamkorlarimiz biz haqimizda nima deyishadi",
+    "testimonial1": {
+      "quote": "WoxWeb Prime butun raqamli infratuzilmamizni o'zgartirdi. Ularning AI integratsiya imkoniyatlari tengsiz.",
+      "author": "Dr. Sara Jonson",
+      "role": "Raqamli transformatsiya direktori",
+      "organization": "Davlat Innovatsiya Markazi"
+    },
+    "testimonial2": {
+      "quote": "Ular yaratgan avtomatlashtirish tizimlari bizga son-sanoqsiz soatlarni tejab berdi va samaradorligimizni sezilarli darajada oshirdi.",
+      "author": "Maykl Chen",
+      "role": "CTO",
+      "organization": "TechCorp Solutions"
+    },
+    "testimonial3": {
+      "quote": "Ularning akademiya dasturi ajoyib. Mening talabalarim endi haqiqiy AI ilovalarini yaratishmoqda.",
+      "author": "Prof. Ahmad Hasan",
+      "role": "Informatika kafedrasi mudiri",
+      "organization": "Milliy Universitet"
+    }
+  },
+  "contact": {
+    "title": "Keling,",
+    "titleHighlight": "Kelajakni birga quramiz",
+    "subtitle": "Raqamli mavjudligingizni o'zgartirishga tayyormisiz? Biz bilan bog'laning.",
+    "name": "Ism",
+    "namePlaceholder": "Ismingiz",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Xabar",
+    "messagePlaceholder": "Loyihangiz haqida bizga ayting...",
+    "submit": "Xabar yuborish",
+    "success": "Xabar yuborildi!",
+    "successDescription": "Biz siz bilan imkon qadar tezroq bog'lanamiz."
+  },
+  "footer": {
+    "copyright": "© 2025",
+    "company": "WoxWeb Prime",
+    "rights": "— Barcha huquqlar himoyalangan."
+  }
+}

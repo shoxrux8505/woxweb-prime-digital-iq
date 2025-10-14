@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Send, Linkedin, Github, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,6 +16,7 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
@@ -23,8 +25,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: t("contact.success"),
+      description: t("contact.successDescription"),
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -41,10 +43,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Let's Build the <span className="gradient-text">Future Together</span>
+            {t("contact.title")} <span className="gradient-text">{t("contact.titleHighlight")}</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your digital presence? Get in touch with us.
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -58,13 +60,13 @@ const Contact = () => {
           >
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Name
+                {t("contact.name")}
               </label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Your name"
+                placeholder={t("contact.namePlaceholder")}
                 required
                 className="bg-background/50 border-primary/20 focus:border-primary/50 rounded-xl"
               />
@@ -72,14 +74,14 @@ const Contact = () => {
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
+                {t("contact.email")}
               </label>
               <Input
                 id="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="your.email@example.com"
+                placeholder={t("contact.emailPlaceholder")}
                 required
                 className="bg-background/50 border-primary/20 focus:border-primary/50 rounded-xl"
               />
@@ -87,13 +89,13 @@ const Contact = () => {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Message
+                {t("contact.message")}
               </label>
               <Textarea
                 id="message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder="Tell us about your project..."
+                placeholder={t("contact.messagePlaceholder")}
                 required
                 rows={6}
                 className="bg-background/50 border-primary/20 focus:border-primary/50 rounded-xl resize-none"
@@ -105,7 +107,7 @@ const Contact = () => {
               size="lg"
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl py-6 text-lg glow-primary"
             >
-              Send Message
+              {t("contact.submit")}
               <Send className="ml-2 w-5 h-5" />
             </Button>
           </motion.form>

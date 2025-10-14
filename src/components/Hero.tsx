@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -27,7 +30,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 border border-primary/20"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">Next Generation Digital Intelligence</span>
+            <span className="text-sm font-medium text-muted-foreground">{t("hero.badge")}</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -37,7 +40,7 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
           >
-            <span className="gradient-text">WoxWeb Prime</span>
+            <span className="gradient-text">{t("hero.title")}</span>
           </motion.h1>
 
           <motion.p
@@ -46,8 +49,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            We create intelligent ecosystems, automation systems, and AI-integrated solutions 
-            for governments, businesses, and education.
+            {t("hero.subtitle")}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -61,7 +63,7 @@ const Hero = () => {
               size="lg" 
               className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-xl glow-primary transition-all"
             >
-              Let's Build Together
+              {t("hero.cta1")}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -69,7 +71,7 @@ const Hero = () => {
               variant="outline" 
               className="px-8 py-6 text-lg rounded-xl border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all"
             >
-              Explore Our Works
+              {t("hero.cta2")}
             </Button>
           </motion.div>
 

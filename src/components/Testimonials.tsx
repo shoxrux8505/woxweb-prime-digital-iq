@@ -1,34 +1,36 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const testimonials = [
-  {
-    quote: "WoxWeb Prime transformed our entire digital infrastructure. Their AI integration capabilities are unmatched.",
-    author: "Dr. Sarah Johnson",
-    role: "Director of Digital Transformation",
-    organization: "Government Innovation Hub",
-  },
-  {
-    quote: "The automation systems they built saved us countless hours and dramatically improved our efficiency.",
-    author: "Michael Chen",
-    role: "CTO",
-    organization: "TechCorp Solutions",
-  },
-  {
-    quote: "Their academy program is exceptional. My students are now building real AI applications.",
-    author: "Prof. Ahmed Hassan",
-    role: "Computer Science Department Head",
-    organization: "National University",
-  },
-];
-
 const Testimonials = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const testimonials = [
+    {
+      quoteKey: "testimonials.testimonial1.quote",
+      authorKey: "testimonials.testimonial1.author",
+      roleKey: "testimonials.testimonial1.role",
+      organizationKey: "testimonials.testimonial1.organization",
+    },
+    {
+      quoteKey: "testimonials.testimonial2.quote",
+      authorKey: "testimonials.testimonial2.author",
+      roleKey: "testimonials.testimonial2.role",
+      organizationKey: "testimonials.testimonial2.organization",
+    },
+    {
+      quoteKey: "testimonials.testimonial3.quote",
+      authorKey: "testimonials.testimonial3.author",
+      roleKey: "testimonials.testimonial3.role",
+      organizationKey: "testimonials.testimonial3.organization",
+    },
+  ];
 
   const next = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   const prev = () => setCurrentIndex((curr) => (curr - 1 + testimonials.length) % testimonials.length);
@@ -45,10 +47,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Client <span className="gradient-text">Testimonials</span>
+            {t("testimonials.title")} <span className="gradient-text">{t("testimonials.titleHighlight")}</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            What our partners say about us
+            {t("testimonials.subtitle")}
           </p>
         </motion.div>
 
@@ -70,18 +72,18 @@ const Testimonials = () => {
               className="text-center"
             >
               <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 italic">
-                "{testimonials[currentIndex].quote}"
+                "{t(testimonials[currentIndex].quoteKey)}"
               </p>
               
               <div className="space-y-2">
                 <p className="text-lg font-bold gradient-text">
-                  {testimonials[currentIndex].author}
+                  {t(testimonials[currentIndex].authorKey)}
                 </p>
                 <p className="text-muted-foreground">
-                  {testimonials[currentIndex].role}
+                  {t(testimonials[currentIndex].roleKey)}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  {testimonials[currentIndex].organization}
+                  {t(testimonials[currentIndex].organizationKey)}
                 </p>
               </div>
             </motion.div>
