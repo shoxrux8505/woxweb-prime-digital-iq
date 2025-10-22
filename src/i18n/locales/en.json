@@ -112,5 +112,9 @@
     "copyright": "© 2025",
     "company": "WoxWeb Prime",
     "rights": "— All Rights Reserved."
+  },
+  "error": {
+    "title": "Error",
+    "description": "Something went wrong. Please try again later."
   }
 }

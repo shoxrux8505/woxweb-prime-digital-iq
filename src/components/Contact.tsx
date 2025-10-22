@@ -2,11 +2,19 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Send, Linkedin, Github, Instagram, MessageCircle } from "lucide-react";
+import {
+  Send,
+  Linkedin,
+  Github,
+  Instagram,
+  MessageCircle,
+  Loader2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { sendContact } from "@/lib/api/contact";
 
 const socialLinks = [
   { icon: Linkedin, label: "LinkedIn", href: "#" },
@@ -19,22 +27,43 @@ const Contact = () => {
   const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [loading, setLoading] = useState<boolean>(false);
   const { toast } = useToast();
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: t("contact.success"),
-      description: t("contact.successDescription"),
-    });
-    setFormData({ name: "", email: "", message: "" });
+  const handleSubmit = async (e: React.FormEvent) => {
+    try {
+      e.preventDefault();
+      console.log(formData);
+      const res = await sendContact(formData);
+      if (res.success) {
+        toast({
+          title: t("contact.success"),
+          description: t("contact.successDescription"),
+        });
+      } else {
+        toast({
+          title: t("error.title"),
+          description: res.error,
+        });
+      }
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: t("error.title"),
+        description: t("error.description"),
+      });
+    }
   };
 
   return (
     <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      
+
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +72,8 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            {t("contact.title")} <span className="gradient-text">{t("contact.titleHighlight")}</span>
+            {t("contact.title")}{" "}
+            <span className="gradient-text">{t("contact.titleHighlight")}</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             {t("contact.subtitle")}
@@ -65,7 +95,10 @@ const Contact = () => {
               <Input
                 id="name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                disabled={loading}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 placeholder={t("contact.namePlaceholder")}
                 required
                 className="bg-background/50 border-primary/20 focus:border-primary/50 rounded-xl"
@@ -79,8 +112,11 @@ const Contact = () => {
               <Input
                 id="email"
                 type="email"
+                disabled={loading}
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 placeholder={t("contact.emailPlaceholder")}
                 required
                 className="bg-background/50 border-primary/20 focus:border-primary/50 rounded-xl"
@@ -88,13 +124,19 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium mb-2"
+              >
                 {t("contact.message")}
               </label>
               <Textarea
                 id="message"
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                disabled={loading}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 placeholder={t("contact.messagePlaceholder")}
                 required
                 rows={6}
@@ -106,9 +148,14 @@ const Contact = () => {
               type="submit"
               size="lg"
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl py-6 text-lg glow-primary"
+              disabled={loading}
             >
               {t("contact.submit")}
-              <Send className="ml-2 w-5 h-5" />
+              {loading ? (
+                <Loader2 className="ml-2 w-5 h-5 animate-spin" />
+              ) : (
+                <Send className="ml-2 w-5 h-5" />
+              )}
             </Button>
           </motion.form>
 

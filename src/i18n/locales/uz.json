@@ -112,5 +112,9 @@
     "copyright": "© 2025",
     "company": "WoxWeb Prime",
     "rights": "— Barcha huquqlar himoyalangan."
+  },
+  "error": {
+    "title": "Xatolik",
+    "description": "Nimadir xato ketdi. Iltimos keyinroq urinib ko'ring!"
   }
 }
