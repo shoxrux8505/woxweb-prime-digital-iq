@@ -6,7 +6,7 @@ export async function sendContact(data: {
   message: string;
 }) {
   const { data: res } = await axios.post(
-    `${process.env.API_URI}/messagesasdasd`,
+    `${import.meta.env.VITE_API_URI}/messages`,
     data
   );
 

@@ -37,9 +37,11 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     try {
+      setLoading(true);
       e.preventDefault();
       console.log(formData);
       const res = await sendContact(formData);
+      console.log(res);
       if (res.success) {
         toast({
           title: t("contact.success"),
@@ -53,10 +55,13 @@ const Contact = () => {
       }
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.log(error);
       toast({
         title: t("error.title"),
         description: t("error.description"),
       });
+    } finally {
+      setLoading(false);
     }
   };
 
