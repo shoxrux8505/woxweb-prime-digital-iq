@@ -20,6 +20,7 @@ const languages = [
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const { theme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
