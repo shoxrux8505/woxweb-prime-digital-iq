@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 rounded-xl overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+            <div className="w-14 h-14 rounded-xl overflow-hidden group-hover:scale-110 transition-transform duration-300 bg-transparent">
               <img src={logo} alt="WoxWeb Prime" className="w-full h-full object-contain" />
             </div>
             <span className="text-xl font-bold gradient-text hidden sm:inline-block">
