@@ -94,6 +94,40 @@
       "organization": "National University"
     }
   },
+  "pricing": {
+    "title": "Our",
+    "titleHighlight": "Pricing",
+    "subtitle": "Choose the perfect plan for your project",
+    "popular": "Most Popular",
+    "cta": "Get Started",
+    "standard": {
+      "title": "Standard",
+      "feature1": "Full website development",
+      "feature2": "Responsive design",
+      "feature3": "Basic SEO optimization",
+      "feature4": "30 days of support"
+    },
+    "gold": {
+      "title": "Gold",
+      "feature1": "Everything in Standard",
+      "feature2": "AI integration & chatbot",
+      "feature3": "Advanced analytics dashboard",
+      "feature4": "90 days of priority support"
+    },
+    "platinum": {
+      "title": "Platinum",
+      "feature1": "Everything in Gold",
+      "feature2": "Full digital ecosystem",
+      "feature3": "Custom automation systems",
+      "feature4": "1 year dedicated support"
+    },
+    "consultation": {
+      "title": "Free Consultation",
+      "description": "Book a free strategy session with our experts",
+      "price": "FREE",
+      "cta": "Book Now"
+    }
+  },
   "contact": {
     "title": "Let's Build the",
     "titleHighlight": "Future Together",
