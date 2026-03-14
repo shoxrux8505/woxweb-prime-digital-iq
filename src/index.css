@@ -8,38 +8,33 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base Colors - Futuristic Dark Theme */
-    --background: 220 25% 8%;
-    --foreground: 210 40% 98%;
+    /* Light Theme - Default */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    /* Card with glassmorphic effect */
-    --card: 220 20% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Neon Blue Primary */
     --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
-    /* Cyan Accent */
     --secondary: 187 85% 53%;
     --secondary-foreground: 220 25% 8%;
 
-    /* Muted with subtle glow */
-    --muted: 220 20% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Purple Accent */
     --accent: 270 70% 60%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 15%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
     --ring: 217 91% 60%;
 
     --radius: 0.75rem;
@@ -55,9 +50,54 @@ All colors MUST be HSL.
       hsl(270 70% 60%),
       hsl(217 91% 60%)
     );
+    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.15);
+    --glow-accent: 0 0 30px hsl(187 85% 53% / 0.1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Dark Theme - Futuristic */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 187 85% 53%;
+    --secondary-foreground: 220 25% 8%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 270 70% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 217 91% 60%;
+
+    /* Custom Design Tokens - Dark */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(217 91% 60%),
+      hsl(187 85% 53%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(270 70% 60%),
+      hsl(217 91% 60%)
+    );
     --glow-primary: 0 0 40px hsl(217 91% 60% / 0.3);
     --glow-accent: 0 0 30px hsl(187 85% 53% / 0.2);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -97,6 +137,12 @@ All colors MUST be HSL.
     background: hsl(var(--card) / 0.6);
     backdrop-filter: blur(12px);
     border: 1px solid hsl(var(--border) / 0.3);
+  }
+
+  .glass-card-dark {
+    background: hsl(220 20% 12% / 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(220 20% 20% / 0.3);
   }
 }
 
