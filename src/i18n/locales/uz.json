@@ -94,6 +94,40 @@
       "organization": "Milliy Universitet"
     }
   },
+  "pricing": {
+    "title": "Bizning",
+    "titleHighlight": "Narxlarimiz",
+    "subtitle": "Loyihangiz uchun mukammal rejani tanlang",
+    "popular": "Eng mashhur",
+    "cta": "Boshlash",
+    "standard": {
+      "title": "Standart",
+      "feature1": "To'liq veb-sayt ishlab chiqish",
+      "feature2": "Adaptiv dizayn",
+      "feature3": "Asosiy SEO optimallashtirish",
+      "feature4": "30 kunlik qo'llab-quvvatlash"
+    },
+    "gold": {
+      "title": "Gold",
+      "feature1": "Standartdagi hamma narsa",
+      "feature2": "AI integratsiyasi va chatbot",
+      "feature3": "Ilg'or tahlil paneli",
+      "feature4": "90 kunlik ustuvor qo'llab-quvvatlash"
+    },
+    "platinum": {
+      "title": "Platinum",
+      "feature1": "Golddagi hamma narsa",
+      "feature2": "To'liq raqamli ekotizim",
+      "feature3": "Maxsus avtomatlashtirish tizimlari",
+      "feature4": "1 yillik maxsus qo'llab-quvvatlash"
+    },
+    "consultation": {
+      "title": "Bepul konsultatsiya",
+      "description": "Mutaxassislarimiz bilan bepul strategik sessiya band qiling",
+      "price": "BEPUL",
+      "cta": "Band qilish"
+    }
+  },
   "contact": {
     "title": "Keling,",
     "titleHighlight": "Kelajakni birga quramiz",
