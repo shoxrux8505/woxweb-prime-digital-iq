@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Menu, X, ChevronDown, Globe, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -75,7 +75,7 @@ const Navbar = () => {
               WoxWeb Prime
             </span>
           </a>
-
+          
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
