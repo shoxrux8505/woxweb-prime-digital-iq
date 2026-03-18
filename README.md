@@ -1,4 +1,9 @@
-
+![alt text](<ChatGPT Image 14 мар. 2026 г., 15_14_36.png>)
+Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 🚀 WoxWeb Prime
 
 WoxWeb Prime is a next-generation AI-driven digital agency platform focused on building intelligent ecosystems, automation systems, and modern web solutions for businesses, governments, startups, and educational institutions.
@@ -56,11 +61,13 @@ Modular Component Structure
 🛠 Tech Stack
 Frontend
 
-Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Vue 3 / Nuxt.js
+
+TypeScript
+
+TailwindCSS
+
+Pinia / Vuex
 
 Framer Motion / VueUse Motion
 
